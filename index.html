@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer="defer"></script>
+</head>
+<body>
+
+
+    <div class="container">
+        <!-- <h1><u>Task Manager</u></h1> -->
+     
+        <!-- Login Form -->
+        <div class="login-form">
+            <h2>Login</h2>
+            <input type="text" id="login-username" placeholder="Username" required>
+            <input type="password" id="login-password" placeholder="Password" required>
+            <button onclick="login()">Login</button>
+        </div>
+
+        <!-- Signup Form -->
+        <div class="signup-form">
+            <h2>Signup</h2>
+            <input type="text" id="signup-username" placeholder="Username" required>
+            <input type="password" id="signup-password" placeholder="Password" required>
+            <button onclick="signup()">Signup</button>
+        </div>
+
+        
+        <!-- <h1><u>Task Manager</u></h1> -->
+        <div class="task-manager" style="display: none;">
+        <h1><u>Task Manager</u></h1>
+
+
+
+        <div class="addtask">
+            <h3>ADD TASK</h3>
+            
+         
+            <input type="text" class="title" placeholder="Enter a Task Title" required>
+            <input type="date" class="date" required min="2023-09-1">
+            <input type="text" class="description" placeholder="Enter Description" required>
+            <select class="category" required>
+                <option value="" hidden>Category</option>
+                <option value="work">Work</option>
+                <option value="shopping">Shopping</option>
+                <option value="personal">Personal</option>
+            </select>
+          
+
+<button class="addbtn" onclick="addTask()">Add Task</button>
+
+
+
+        </div>
+        <br>
+        <div class="list">
+            <h3>LIST OF TASKS</h3>
+            <div class="functions">
+                <input type="text" placeholder="Search a Task" class="search">
+                <button class="searchbtn" onclick="searchTasks()">Search</button>
+                <select class="sortby">
+                    <option value=""hidden>Sort By</option>
+                    <option value="duedate" class="selected-due-date">Due Date</option>
+                    <option value="status">Status</option>
+                    <option value="markascomplete">Mark As Complete</option>
+                    <option value="Category">Category</option>
+                </select>
+            </div>
+            <div class="taskheading">
+            <div class="marktask">Mark</div>
+            <div class="titletask">TaskTitle</div>
+            <div class="descriptiontask">Description</div>    
+            <div class="duedatetask">DueDate</div>
+            <div class="status">Status</div>
+           <div class="status">Edit</div>
+           <div class="status">Delete</div> 
+            <!-- <div class="edit">Edit</div>
+            <div class="delete">Delete</div> -->
+            </div>
+            <div class="tasklist">
+<!-- <div class="task"> -->
+    <!-- <div class="edit"><button class="edit-button" onclick="editTask(this)">Edit</button></div>
+    <div class="delete"><button class="delete-button" onclick="deleteTask(this)">Delete</button></div>
+
+</div> -->
+            </div>
+        </div>
+    </div>
+</div>
+    <script src="script2.js" defer="defer"></script>
+    
+</body>
+</html>
